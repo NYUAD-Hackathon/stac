@@ -23,7 +23,16 @@
 	</script>
 	
 	<script>
-	
+	function yoga() {
+	  $("#myDiv").toggle();
+	  $("#thankyou").toggle();
+	  $("#phone").val("");
+	  setTimeout(function(){$("#thankyou").toggle(500);}, 1000);
+	}
+	function loadDoc() {
+	console.log("yoga");
+	   $("#myDiv").toggle();
+	}
 	function loadXMLDoc()
 	{
 	var xmlhttp;
@@ -165,14 +174,10 @@
                             <div class="panel-body">
                             						
 								<h3 id="laborlaw">Labor Laws</h3>
-								<p>
-									Welcome to Abu Dhabi in the United Arab Emirates.  Thousands of people come here every year to work and make a living for themselves and their families.
-                                </p>
                                 <p>
+									Welcome to Abu Dhabi in the United Arab Emirates.  Thousands of people come here every year to work and make a living for themselves and their families. <br>
 									Your employers will expect you to honour your contract by turning up to work in time with the right attitude and skills. In return for honoring this contract, the law says that you must be paid the agreed salary, along with health insurance cover, acceptable accommodation and a ticket home.
-									Sometimes things do not work out as they should and there might be a problem between you and your employer.
-                                </p>
-                                <p>
+									Sometimes things do not work out as they should and there might be a problem between you and your employer. <br>
 									The following information outlines some of your rights under the Labour laws of the UAE. You can find further information and assistance through the phone numbers provided.					
 								</p>
 								<h4 id="section1"><button id="b1" onclick="aud_play_pause(this.id)" ><img height="35" width="35" src="assets/img/playbutton.png"></button>  Your Visa </h4>
@@ -181,9 +186,9 @@
 									It is illegal for an employer to keep your passport with them.<br>
 									Slavery and human trafficking – that is people forced to work against their will is strictly against the law.<br>
 								</p>
-								<button type="button" id="submit" onclick="loadXMLDoc()">Submit a Complaint</button>
-								<div id="myDiv"><h2></h2></div>
-								
+								<button type="button" onclick="loadDoc();">Submit a Complaint</button>
+								<div id="myDiv" style="display:none"><h4>International Telephone Input</h4><input id='phone' type='tel' name='number'/><button type='submit' onclick='yoga();'> Submit</button></div>
+								<div id="thankyou" style="display:none"> <h4> Thank you! We will contact you!</h4></div>
 								
 								<h4 id="section2"><button id="b2" onclick="aud_play_pause(this.id)" ><img height="35" width="35" src="assets/img/playbutton.png"></button>  Your Salary</h4>
 							<p>

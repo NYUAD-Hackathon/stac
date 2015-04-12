@@ -1,3 +1,317 @@
-<template name="Index">
-    Hello World
-</template>
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<link rel="stylesheet" href="hak/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="hak/build/css/demo.css">
+	
+    <title>Arshidni project</title>
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/css/custom-styles.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+	
+	
+</head>
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="hak/build/js/intlTelInput.min.js"></script>
+	<script src="hak/build/js/intlTelInput.js"></script>
+	<script>
+		$("#phone").intlTelInput();
+	</script>
+	
+	<script>
+	
+	function loadXMLDoc()
+	{
+	var xmlhttp;
+	if (window.XMLHttpRequest)
+	  {// code for IE7+, Firefox, Chrome, Opera, Safari
+	  xmlhttp=new XMLHttpRequest();
+	  }
+	else
+	  {// code for IE6, IE5
+	  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	  }
+	xmlhttp.onreadystatechange=function()
+	  {
+	  
+	  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+		document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+		/////////////////////////////////////
+		  $("#phone").intlTelInput({
+			//allowExtensions: true,
+			//autoFormat: false,
+			//autoHideDialCode: false,
+			//autoPlaceholder: false,
+			//defaultCountry: "auto",
+			//ipinfoToken: "yolo",
+			//nationalMode: false,
+			//numberType: "MOBILE",
+			//onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+			//preferredCountries: ['cn', 'jp'],
+			utilsScript: "hak/lib/libphonenumber/build/utils.js"
+			
+		  });
+				$("form").submit(function() {              
+		var fullnumber = $("#phone").intlTelInput("getNumber");
+		$("#phone").val(fullnumber);     
+	});
+
+		}		
+	  }
+	xmlhttp.open("GET","hak/demo.php",true);
+	xmlhttp.send();
+	}
+
+
+</script>
+
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><b>Ar</b>shidni</a>
+            </div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			   <ul class="nav navbar-nav" onclick="dowhatever();">
+					
+					<li width="25px" class="active"><a href="#"><img height="18px" width="25px" src="assets/img/eng.png"><span class="sr-only">English</span></a></li>
+					<li width="25px"><a href="#"><img height="18px" width="25px" src="assets/img/Ind.gif"><span class="sr-only">Hindi</span></a></li>
+					<li width="25px"><a href="#"><img height="18px" width="25px" src="assets/img/amharic.gif"><span class="sr-only"></span></a></li>
+					<li width="25px"><a href="#"><img height="18px" width="25px" src="assets/img/Ben.jpg"><span class="sr-only">Bengali</span></a></li>
+					<li width="25px"><a href="#"><img height="18px" width="25px" src="assets/img/Ind.jpg"><span class="sr-only"></span></a></li>
+					<li width="25px"><a href="#"><img height="18px" width="25px" src="assets/img/Man.gif"><span class="sr-only"></span></a></li>
+					<li width="25px"><a href="#"><img height="18px" width="25px" src="assets/img/Nep.png"><span class="sr-only"></span></a></li>
+					<li width="25px"><a href="#"><img height="18px" width="25px" src="assets/img/Sin.png"><span class="sr-only"></span></a></li>
+					<li width="25px"><a href="#"><img height="18px" width="25px" src="assets/img/tag.png"><span class="sr-only"></span></a></li>
+					<li width="25px"><a href="#"><img height="18px" width="25px" src="assets/img/Amh.jpg"><span class="sr-only">Amharic</span></a></li>
+					<li width="25px"><a href="#"><img height="18px" width="25px" src="assets/img/telugu.jpg"><span class="sr-only"></span></a></li>
+					<li width="25px"><a href="#"><img height="18px" width="25px" src="assets/img/Amh.jpg"><span class="sr-only"></span></a></li>
+					
+					
+
+				</ul>
+			<!-- **********************************-->
+			
+        </nav>
+        <!-- *********************************************************************************************************************************************************  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+                        <a class="active-menu" href="#section1"><i class="fa fa-dashboard"></i>Your Visa</a>
+                    </li>
+                    <li>
+                        <a href="#section2"><i class="fa fa-desktop"></i>Your Salary</a>
+                    </li>
+					<li>
+                        <a href="#section3"><i class="fa fa-bar-chart-o"></i>Your Working Conditions</a>
+                    </li>
+                    <li>
+                        <a href="#section4"><i class="fa fa-qrcode"></i>Losing your job</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#section5"><i class="fa fa-table"></i>Going Home</a>
+                    </li>
+                    <li>
+                        <a href="#section6"><i class="fa fa-edit"></i>Your Rights under law</a>
+                    </li>
+					 <li>
+                        <a href="#section7"><i class="fa fa-edit"></i>Domestic Workers</a>
+                    </li>
+
+        
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- ********************************************************************************************************************************************************** -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            Arshidni Project </br><small>Guides you to your rights</small>
+							<audio  id="myAudio" 
+								 <source  src="english/Visa.mp3" type='audio/mp3'>								 
+							</audio>
+                        </h1>
+                    </div>
+                </div>
+				
+				
+                <!-- /. ROW  -->
+                <div class="row">
+                    <div class="col-md-9 col-sm-12 col-xs-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                               
+                            </div>
+                            <div class="panel-body">
+                            						
+								<h3 id="laborlaw">Labor Laws</h3>
+								<p>
+									Welcome to Abu Dhabi in the United Arab Emirates.  Thousands of people come here every year to work and make a living for themselves and their families. </br>
+									Your employers will expect you to honour your contract by turning up to work in time with the right attitude and skills. In return for honoring this contract, the law says that you must be paid the agreed salary, along with health insurance cover, acceptable accommodation and a ticket home.
+									Sometimes things do not work out as they should and there might be a problem between you and your employer. </br>
+									The following information outlines some of your rights under the Labour laws of the UAE. You can find further information and assistance through the phone numbers provided.					
+								</p>
+								<h4 id="section1"><button id="b1" onclick="aud_play_pause(this.id)" ><img height="35" width="35" src="assets/img/playbutton.png"></button>  Your Visa </h4>
+								<p>
+									The cost of the visa must be paid by your employer. It is illegal for recruitment agencies to take advance payments from you for visas.</br>
+									It is illegal for an employer to keep your passport with them.</br>
+									Slavery and human trafficking – that is people forced to work against their will is strictly against the law.</br>
+								</p>
+								<button type="button" id="submit" onclick="loadXMLDoc()">Submit a Complaint</button>
+								<div id="myDiv"><h2></h2></div>
+								
+								
+								<h4 id="section2"><button id="b2" onclick="aud_play_pause(this.id)" ><img height="35" width="35" src="assets/img/playbutton.png"></button>  Your Salary</h4>
+							<p>
+								Your salary must be paid once a month. 
+								No deductions can be made from your salary - except for repaying of loans or other benefits approved by the Ministry of Labour, or in paying fines.
+								If your pay is overdue by 15 days you can file complaints online at HYPERLINK "http://www.mol.gov.ae"www.mol.gov.ae or by calling the hotline on 800665
+
+							</p>
+							
+							<h4 id="section3"><button id="b3" onclick="aud_play_pause(this.id)" ><img height="35" width="35" src="assets/img/playbutton.png"></button>  Your Working Conditions</h4>
+							<p>
+								You are not allowed to work more than 8 hours a day or 48 hours a week. Travel time to and from work is not included. You must have one day a week off.
+								Workers in dangerous conditions are not allowed to work for more than 7 hours a day. These include working in front of ovens, petrol refineries, cement industries, ice stores, fertilizer manufacturing, compressed gas filling stations, mineral acids and chemical factories, fat melting, mines and quarries and paint and varnish manufacturing.
+								During the Holy month of Ramadan the working day is to be reduced by 2 hours. 
+								No one is allowed to work for more than five continuous hours without a break for rest, food and prayer of at least one hour.
+								You must not work outdoors between the hours of 12.30pm and 3pm during the summer months.
+								If you are sick you must inform your employer within 24 hours and medical examination must be provided by your employer. You are not entitled to sick leave in the first three months of your employment.
+
+
+							</p>
+							<h4 id="section4"><button id="b4" onclick="aud_play_pause(this.id)" ><img height="35" width="35" src="assets/img/playbutton.png"></button>  Losing your job</h4>
+							<p>
+								If you are fired without legal reason the worker is entitled to 3 months pay. </br>
+								You can be legally sacked for the following reasons:</br>
+								<ul>
+									<li>
+										Submission of false documentation
+									</li>
+									<li>
+										During your first three months which is also your probation period 
+									</li>
+									<li>
+										Violating known health and safety laws
+									</li>
+									<li>
+										Failure to perform basic duties following an official warning.
+									</li>
+									<li>
+										Criminal conviction on a matter of honour or security
+									</li>
+										Breach of confidentiality
+									<li>
+										Drunkenness or drug taking
+									</li>
+										Drunkenness or drug taking
+									<li>
+										Assault on employer or manager
+									</li>
+									<li>
+										Absence from work for 7 or more consecutive days
+									</li>
+									<li>
+										If the worker works for another employer during sick leave.
+									</li>
+									
+								</ul>
+								
+									If you resign from your job you are entitled to 45 days pay.
+
+								</p>
+							
+							<h4 id="section5"><button id="b5" onclick="aud_play_pause(this.id)" ><img height="35" width="35" src="assets/img/playbutton.png"></button>  Going Home</h4>
+							<p>
+								At the end of the employment contract, the employer is responsible for sending you home or to another agreed place.</br>
+								If you transfer to a new place of work this obligation of repatriation shifts to your new employer.</br>
+								If the work is terminated because you have broken your contract, you pay your own costs for going home.</br>
+
+							</p>
+							<h4 id="section6"><button id="b6" onclick="aud_play_pause(this.id)" ><img height="35" width="35" src="assets/img/playbutton.png"></button>  Your Rights under law</h4>
+							<p>
+								The employer must provide you basic health insurance.</br>
+								An employer must provide suitable protection, equipment and clothing against injuries. They must also provide a first aid kit, rest rooms and adequate lighting.
+								Provide you suitable transportation and accommodation. Drinking water and food  should also be provided. </br>
+								In the event of injury in the place of work – the employer must pay you medical treatment for up to six months. If death occurs in the workplace the employer must pay your family a basic pay of up to 2 years.
+
+
+							</p>
+							<h4 id="section7"><button id="b7" onclick="aud_play_pause(this.id)" ><img height="35" width="35" src="assets/img/playbutton.png"></button>  Domestic Workers</h4>
+							<p>
+								Domestic Workers are unfortunately excluded from the protection of the labour law at this point in time. </br>
+								However your contract must be valid for two years and provide for a month’s paid leave. Your employers are obliged to cover medical aid and provide you a one way ticket at the end of the contract.</br>
+								The employer must repatriate the body and personal belongings in the event of death.
+							</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                
+                            </div>
+                            <div class="panel-body">
+								<div id="playimg" ><img src="assets/img/Play.png"><span class="sr-only"></div>
+								<div ><img height="50%" width="50%" src="assets/img/Hand.png"><span class="sr-only"></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                <!-- /. ROW  -->
+                <!-- /. ROW  -->
+				<footer><p></p></footer>
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+  
+</body>
+
+</html>
+
+ <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+	<script src="http://code.jquery.com/jquery-git.js"></script>
+    <script src="assets/js/media.js" type="text/javascript" charset="utf-8"></script>
+	
+    <!-- Bootstrap Js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+	 
+    <!-- Metis Menu Js -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+    
+	
+	<script src="assets/js/easypiechart.js"></script>
+	<script src="assets/js/easypiechart-data.js"></script>
+	
+	
+    <!-- Custom Js -->
+    <script src="assets/js/custom-scripts.js"></script>

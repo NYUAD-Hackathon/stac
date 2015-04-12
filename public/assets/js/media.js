@@ -64,7 +64,9 @@ function BindClickEvent() {
 
 // This runs when the document starts
  $( document ).ready(function() {
-    BindClickEvent();
+    window.setTimeout(function() {
+        BindClickEvent();
+    }, 1000);
 	console.log("document function ran");
  });
  

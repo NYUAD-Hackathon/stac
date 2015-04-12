@@ -47,9 +47,15 @@ function aud_play_pause(category) {
 }
 
 // It adds a click event to all li elements.
+function dowhatever() {
+  var active_text = $(".active").text().trim();
+  console.log(active_text);
+
+}
 function BindClickEvent() {
 	var selector = '.nav li';
     $(selector).on('click', function(){
+	    console.log("adding onclick to this");
         $(selector).removeClass('active');
         $(this).addClass('active');
 });};
@@ -57,5 +63,6 @@ function BindClickEvent() {
 // This runs when the document starts
  $( document ).ready(function() {
     BindClickEvent();
+	console.log("document function ran");
  });
  

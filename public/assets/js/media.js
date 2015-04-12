@@ -1,12 +1,12 @@
 
 // This adjusts audio links depending on category and language.
 function adjust_audio(category) {
-	var active_text = $(".active").text().trim();
+	var active_text = $(".active").text().trim().toLowerCase();
 	console.log(active_text);
  
 	var audio_elem = document.getElementById("myAudio");
 	if(category=="b1"){
-      audio_elem.src=active_text+"/visa.mp3";
+      audio_elem.src=active_text+"/Visa.mp3";
 	} else if(category=="b2"){
       audio_elem.src=active_text+"/Salary.mp3";
 	} else if(category=="b3"){

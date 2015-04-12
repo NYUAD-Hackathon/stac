@@ -187,7 +187,7 @@ Template.Admin.rendered = function() {
             .attr('transform', 'translate(0,25)')
             .text(function(text) {
                 var date = new Date(0);
-                date.setUTCSeconds(scale.minXRounded + parseInt(text) * 60 * 60 * 24);
+                date.setUTCSeconds((Math.floor(scale.minX/(60*60*24)) + parseInt(text)) * 60 * 60 * 24);
                 var dateString = [date.getDate(),date.getMonth()+1,date.getFullYear()].join('/')
                 return dateString;
             })

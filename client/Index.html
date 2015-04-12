@@ -26,7 +26,16 @@
 	</script>
 	
 	<script>
-	
+	function yoga() {
+	  $("#myDiv").toggle();
+	  $("#thankyou").toggle();
+	  $("#phone").val("");
+	  setTimeout(function(){$("#thankyou").toggle(500);}, 1000);
+	}
+	function loadDoc() {
+	console.log("yoga");
+	   $("#myDiv").toggle();
+	}
 	function loadXMLDoc()
 	{
 	var xmlhttp;
@@ -150,7 +159,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="page-header">
-                            Arshidni Project </br><small>Guides you to your rights</small>
+                            Arshidni Project <br><small>Guides you to your rights</small>
 							<audio  id="myAudio" 
 								 <source  src="english/Visa.mp3" type='audio/mp3'>								 
 							</audio>
@@ -170,20 +179,20 @@
                             						
 								<h3 id="laborlaw">Labor Laws</h3>
 								<p>
-									Welcome to Abu Dhabi in the United Arab Emirates.  Thousands of people come here every year to work and make a living for themselves and their families. </br>
+									Welcome to Abu Dhabi in the United Arab Emirates.  Thousands of people come here every year to work and make a living for themselves and their families. <br>
 									Your employers will expect you to honour your contract by turning up to work in time with the right attitude and skills. In return for honoring this contract, the law says that you must be paid the agreed salary, along with health insurance cover, acceptable accommodation and a ticket home.
-									Sometimes things do not work out as they should and there might be a problem between you and your employer. </br>
+									Sometimes things do not work out as they should and there might be a problem between you and your employer. <br>
 									The following information outlines some of your rights under the Labour laws of the UAE. You can find further information and assistance through the phone numbers provided.					
 								</p>
 								<h4 id="section1"><button id="b1" onclick="aud_play_pause(this.id)" ><img height="35" width="35" src="assets/img/playbutton.png"></button>  Your Visa </h4>
 								<p>
-									The cost of the visa must be paid by your employer. It is illegal for recruitment agencies to take advance payments from you for visas.</br>
-									It is illegal for an employer to keep your passport with them.</br>
-									Slavery and human trafficking – that is people forced to work against their will is strictly against the law.</br>
+									The cost of the visa must be paid by your employer. It is illegal for recruitment agencies to take advance payments from you for visas.<br>
+									It is illegal for an employer to keep your passport with them.<br>
+									Slavery and human trafficking – that is people forced to work against their will is strictly against the law.<br>
 								</p>
-								<button type="button" id="submit" onclick="loadXMLDoc()">Submit a Complaint</button>
-								<div id="myDiv"><h2></h2></div>
-								
+								<button type="button" onclick="loadDoc();">Submit a Complaint</button>
+								<div id="myDiv" style="display:none"><h4>International Telephone Input</h4><input id='phone' type='tel' name='number'/><button type='submit' onclick='yoga();'> Submit</button></div>
+								<div id="thankyou" style="display:none"> <h4> Thank you! We will contact you!</h4></div>
 								
 								<h4 id="section2"><button id="b2" onclick="aud_play_pause(this.id)" ><img height="35" width="35" src="assets/img/playbutton.png"></button>  Your Salary</h4>
 							<p>
@@ -206,8 +215,8 @@
 							</p>
 							<h4 id="section4"><button id="b4" onclick="aud_play_pause(this.id)" ><img height="35" width="35" src="assets/img/playbutton.png"></button>  Losing your job</h4>
 							<p>
-								If you are fired without legal reason the worker is entitled to 3 months pay. </br>
-								You can be legally sacked for the following reasons:</br>
+								If you are fired without legal reason the worker is entitled to 3 months pay. <br>
+								You can be legally sacked for the following reasons:<br>
 								<ul>
 									<li>
 										Submission of false documentation
@@ -247,24 +256,24 @@
 							
 							<h4 id="section5"><button id="b5" onclick="aud_play_pause(this.id)" ><img height="35" width="35" src="assets/img/playbutton.png"></button>  Going Home</h4>
 							<p>
-								At the end of the employment contract, the employer is responsible for sending you home or to another agreed place.</br>
-								If you transfer to a new place of work this obligation of repatriation shifts to your new employer.</br>
-								If the work is terminated because you have broken your contract, you pay your own costs for going home.</br>
+								At the end of the employment contract, the employer is responsible for sending you home or to another agreed place.<br>
+								If you transfer to a new place of work this obligation of repatriation shifts to your new employer.<br>
+								If the work is terminated because you have broken your contract, you pay your own costs for going home.<br>
 
 							</p>
 							<h4 id="section6"><button id="b6" onclick="aud_play_pause(this.id)" ><img height="35" width="35" src="assets/img/playbutton.png"></button>  Your Rights under law</h4>
 							<p>
-								The employer must provide you basic health insurance.</br>
+								The employer must provide you basic health insurance.<br>
 								An employer must provide suitable protection, equipment and clothing against injuries. They must also provide a first aid kit, rest rooms and adequate lighting.
-								Provide you suitable transportation and accommodation. Drinking water and food  should also be provided. </br>
+								Provide you suitable transportation and accommodation. Drinking water and food  should also be provided. <br>
 								In the event of injury in the place of work – the employer must pay you medical treatment for up to six months. If death occurs in the workplace the employer must pay your family a basic pay of up to 2 years.
 
 
 							</p>
 							<h4 id="section7"><button id="b7" onclick="aud_play_pause(this.id)" ><img height="35" width="35" src="assets/img/playbutton.png"></button>  Domestic Workers</h4>
 							<p>
-								Domestic Workers are unfortunately excluded from the protection of the labour law at this point in time. </br>
-								However your contract must be valid for two years and provide for a month’s paid leave. Your employers are obliged to cover medical aid and provide you a one way ticket at the end of the contract.</br>
+								Domestic Workers are unfortunately excluded from the protection of the labour law at this point in time. <br>
+								However your contract must be valid for two years and provide for a month’s paid leave. Your employers are obliged to cover medical aid and provide you a one way ticket at the end of the contract.<br>
 								The employer must repatriate the body and personal belongings in the event of death.
 							</p>
                             </div>

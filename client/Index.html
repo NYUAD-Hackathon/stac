@@ -1,7 +1,4 @@
-﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
+﻿<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
@@ -13,10 +10,10 @@
     <link href="assets/css/font-awesome.css" rel="stylesheet" />
     <link href="assets/css/custom-styles.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-	
-	
+    <script src="assets/js/media.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
+<template name="Index">
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="hak/build/js/intlTelInput.min.js"></script>
@@ -82,8 +79,6 @@
 
 </script>
 
-
-<body>
     <div id="wrapper">
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar-header">
@@ -115,6 +110,7 @@
 
 				</ul>
 			<!-- **********************************-->
+            </div>
 			
         </nav>
         <!-- *********************************************************************************************************************************************************  -->
@@ -159,9 +155,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="page-header">
-                            Arshidni Project <br><small>Guides you to your rights</small>
-							<audio  id="myAudio" 
-								 <source  src="english/Visa.mp3" type='audio/mp3'>								 
+                            Arshidni Project <small>Guides you to your rights</small>
+							<audio  id="myAudio">
+								 <source src="english/Visa.mp3" type='audio/mp3'>								 
 							</audio>
                         </h1>
                     </div>
@@ -178,7 +174,7 @@
                             <div class="panel-body">
                             						
 								<h3 id="laborlaw">Labor Laws</h3>
-								<p>
+                                <p>
 									Welcome to Abu Dhabi in the United Arab Emirates.  Thousands of people come here every year to work and make a living for themselves and their families. <br>
 									Your employers will expect you to honour your contract by turning up to work in time with the right attitude and skills. In return for honoring this contract, the law says that you must be paid the agreed salary, along with health insurance cover, acceptable accommodation and a ticket home.
 									Sometimes things do not work out as they should and there might be a problem between you and your employer. <br>
@@ -286,9 +282,8 @@
                                 
                             </div>
                             <div class="panel-body">
-								<div id="playimg" ><img src="assets/img/Play.png"><span class="sr-only"></div>
-								<div ><img height="50%" width="50%" src="assets/img/Hand.png"><span class="sr-only"></div>
-                                
+								<div id="playimg" ><img src="assets/img/Play.png"><span class="sr-only"></span></div>
+								<div ><img height="50%" width="50%" src="assets/img/Hand.png"><span class="sr-only"></span></div>
                             </div>
                         </div>
                     </div>
@@ -300,17 +295,13 @@
         </div>
         <!-- /. PAGE WRAPPER  -->
     </div>
+    </div>
   
-</body>
-
-</html>
-
  <!-- /. WRAPPER  -->
     <!-- JS Scripts-->
     <!-- jQuery Js -->
     <script src="assets/js/jquery-1.10.2.js"></script>
 	<script src="http://code.jquery.com/jquery-git.js"></script>
-    <script src="assets/js/media.js" type="text/javascript" charset="utf-8"></script>
 	
     <!-- Bootstrap Js -->
     <script src="assets/js/bootstrap.min.js"></script>
@@ -325,3 +316,4 @@
 	
     <!-- Custom Js -->
     <script src="assets/js/custom-scripts.js"></script>
+</template>

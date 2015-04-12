@@ -91,7 +91,7 @@
                 <a class="navbar-brand" href="index.html"><b>Ar</b>shidni</a>
             </div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			   <ul class="nav navbar-nav" onclick="dowhatever();">
+			   <ul class="nav navbar-nav">
 					
 					<li width="25px" class="active"><a href="#"><img height="18px" width="25px" src="assets/img/eng.png"><span class="sr-only">English</span></a></li>
 					<li width="25px"><a href="#"><img height="18px" width="25px" src="assets/img/Ind.gif"><span class="sr-only">Hindi</span></a></li>
@@ -180,16 +180,17 @@
 									Sometimes things do not work out as they should and there might be a problem between you and your employer. <br>
 									The following information outlines some of your rights under the Labour laws of the UAE. You can find further information and assistance through the phone numbers provided.					
 								</p>
+								
+								<button type="button" onclick="loadDoc();">Submit a Complaint</button>
+								<div id="myDiv" style="display:none"><h4>International Telephone Input</h4><input id='phone' type='tel' name='number'/><button type='submit' onclick='yoga();'> Submit</button></div>
+								<div id="thankyou" style="display:none"> <h4> Thank you! We will contact you!</h4></div>
+								
 								<h4 id="section1"><button id="b1" onclick="aud_play_pause(this.id)" ><img height="35" width="35" src="assets/img/playbutton.png"></button>  Your Visa </h4>
 								<p>
 									The cost of the visa must be paid by your employer. It is illegal for recruitment agencies to take advance payments from you for visas.<br>
 									It is illegal for an employer to keep your passport with them.<br>
 									Slavery and human trafficking – that is people forced to work against their will is strictly against the law.<br>
 								</p>
-								<button type="button" onclick="loadDoc();">Submit a Complaint</button>
-								<div id="myDiv" style="display:none"><h4>International Telephone Input</h4><input id='phone' type='tel' name='number'/><button type='submit' onclick='yoga();'> Submit</button></div>
-								<div id="thankyou" style="display:none"> <h4> Thank you! We will contact you!</h4></div>
-								
 								<h4 id="section2"><button id="b2" onclick="aud_play_pause(this.id)" ><img height="35" width="35" src="assets/img/playbutton.png"></button>  Your Salary</h4>
 							<p>
 								Your salary must be paid once a month. 

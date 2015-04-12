@@ -1,0 +1,8 @@
+.barchart-container {
+    overflow-x: scroll
+}
+
+.tick-text {
+    transform: translateY(30px) rotate(-45deg);
+    margin-top: 20px;
+}

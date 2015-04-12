@@ -1,9 +1,101 @@
 <head>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <title>أرشدني</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <template name="Admin">
-    <h1>أرشدني</h1>
-    <svg id="barchart"></svg>
+    <div class="container">
+    <h1>أرشدني <small>Arshidni</small></h1>
+    <div class="row">
+        <div class="col-lg-8 barchart-container">
+            <svg id="barchart"></svg>
+        </div>
+        <div class="col-lg-4">
+            <dl>
+                <dt>Language Filters</dt>
+                <dd class="checkbox">
+                    <label>
+                        <input type="checkbox" name="English" class="ln-select">
+                        English
+                    </label>
+                </dd>
+                <dd class="checkbox">
+                    <label>
+                        <input type="checkbox" name="Amharic" class="ln-select" value="Amharic">
+                        Amharic
+                    </label>
+                </dd>
+                <dd class="checkbox">
+                    <label>
+                        <input type="checkbox" name="Bengali" class="ln-select" value="Bengali">
+                        Bengali
+                    </label>
+                </dd>
+                <dd class="checkbox">
+                    <label>
+                        <input type="checkbox" name="Hindi" class="ln-select" value="Hindi">
+                        Hindi
+                    </label>
+                </dd>
+                <dd class="checkbox">
+                    <label>
+                        <input type="checkbox" name="Indonesian" class="ln-select" value="Indonesian">
+                        Indonesian
+                    </label>
+                </dd>
+                <dd class="checkbox">
+                    <label>
+                        <input type="checkbox" name="Malayalam" class="ln-select" value="Malayalam">
+                        Malayalam
+                    </label>
+                </dd>
+                <dd class="checkbox">
+                    <label>
+                        <input type="checkbox" name="Mandarin" class="ln-select" value="Mandarin">
+                        Mandarin
+                    </label>
+                </dd>
+                <dd class="checkbox">
+                    <label>
+                        <input type="checkbox" name="Nepali" class="ln-select" value="Nepali">
+                        Nepali
+                    </label>
+                </dd>
+                <dd class="checkbox">
+                    <label>
+                        <input type="checkbox" name="Sinhalese" class="ln-select" value="Sinhalese">
+                        Sinhalese
+                    </label>
+                </dd>
+                <dd class="checkbox">
+                    <label>
+                        <input type="checkbox" name="Tagalog" class="ln-select" value="Tagalog">
+                        Tagalog
+                    </label>
+                </dd>
+                <dd class="checkbox">
+                    <label>
+                        <input type="checkbox" name="Tamil" class="ln-select" value="Tamil">
+                        Tamil
+                    </label>
+                </dd>
+                <dd class="checkbox">
+                    <label>
+                        <input type="checkbox" name="Telugu" class="ln-select" value="Telugu">
+                        Telugu
+                    </label>
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+     <!-- Include all compiled plugins (below), or include individual files as needed -->
+     <script src="js/bootstrap.min.js"></script>
+     </div>
 </template>

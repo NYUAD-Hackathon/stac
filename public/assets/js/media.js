@@ -55,6 +55,7 @@ function dowhatever() {
 function BindClickEvent() {
 	var selector = '.nav li';
     console.log("adding onclick to this");
+    console.log($(selector));
     $(selector).on('click', function(){
 	    console.log("adding onclick to this");
         $(selector).removeClass('active');
